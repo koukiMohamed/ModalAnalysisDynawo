@@ -1,0 +1,80 @@
+# Copyright (c) 2015-2019, RTE (http://www.rte-france.com)
+# See AUTHORS.txt
+# All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, you can obtain one at http://mozilla.org/MPL/2.0/.
+# SPDX-License-Identifier: MPL-2.0
+#
+# This file is part of Dynawo, an hybrid C++/Modelica open source time domain simulation tool for power systems.
+
+# Preassembled models
+
+set(MODELICA_PREASSEMBLED_MODELS
+    CurrentLimitAutomaton.xml
+    EventConnectedStatus.xml
+    EventQuadripoleConnection.xml
+    EventQuadripoleDisconnection.xml
+    EventSetPointBoolean.xml
+    EventSetPointReal.xml
+    EventSetPointDoubleReal.xml
+    GeneratorFictitious.xml
+    GeneratorPQ.xml
+    GeneratorPQPropSignalN.xml
+    GeneratorPV.xml
+    GeneratorPVSignalN.xml
+    GeneratorPVWithImpedanceSignalN.xml
+    GeneratorPVDiagramPQSignalN.xml
+    GeneratorPVDiagramPQWithImpedanceSignalN.xml
+    GeneratorPVPropSignalN.xml
+    GeneratorPVRemoteSignalN.xml
+    GeneratorSynchronousFourWindings.xml
+    GeneratorSynchronousThreeWindings.xml
+    GeneratorSynchronousFourWindingsProportionalRegulations.xml
+    GeneratorSynchronousThreeWindingsProportionalRegulations.xml
+    GeneratorSynchronousFourWindingsGoverPropVRPropInt.xml
+    GeneratorSynchronousThreeWindingsGoverPropVRPropInt.xml
+    GenericAutomaton.xml
+    GridFormingConverterDroopControl.xml
+    GridFormingConverterMatchingControl.xml
+    GridFormingConverterDispatchableVirtualOscillatorControl.xml
+    HvdcPVEmulation.xml
+    HvdcPTanPhi.xml
+    HvdcVSC.xml
+    InfiniteBus.xml
+    InjectorBG.xml
+    Line.xml
+    LoadAlphaBeta.xml
+    LoadAlphaBetaRestorative.xml
+    LoadOneTransformer.xml
+    LoadOneTransformerTapChanger.xml
+    LoadPQ.xml
+    LoadTwoTransformers.xml
+    LoadTwoTransformersTapChangers.xml
+    LoadZIP.xml
+    NodeFault.xml
+    PhaseShifterI.xml
+    PhaseShifterP.xml
+    ShuntBWithSections.xml
+    ShuntBWithSectionsWithRegulation.xml
+    SetPoint.xml
+    StaticVarCompensator.xml
+    StaticVarCompensatorPV.xml
+    Step.xml
+    TapChangerAutomaton.xml
+    TapChangerBlockingArea.xml
+    TransformerFixedRatio.xml
+    UnderVoltageAutomaton.xml
+    VRRemote.xml
+    )
+
+# PYTHON scripts preassembled models
+set(PYTHON_SCRIPTS_PREASSEMBLED_MODELS
+    buildChecker.py
+    )
+
+install(PROGRAMS ${PYTHON_SCRIPTS_PREASSEMBLED_MODELS} DESTINATION ${SBINDIR_NAME})
+
+foreach( FILE ${MODELICA_PREASSEMBLED_MODELS} )
+    compile_preassembled_model(${FILE})
+endforeach( FILE )
