@@ -23,7 +23,7 @@
 #include "JOBSolverEntryImpl.h"
 #include "JOBSimulationEntryImpl.h"
 #include "JOBOutputsEntryImpl.h"
-
+#include "JOBEvalLineariseEntryImpl.h"
 namespace job {
 
 TEST(APIJOBTest, testJobEntry) {
@@ -34,6 +34,7 @@ TEST(APIJOBTest, testJobEntry) {
   ASSERT_EQ(job->getSolverEntry(), boost::shared_ptr<SolverEntry>());
   ASSERT_EQ(job->getSimulationEntry(), boost::shared_ptr<SimulationEntry>());
   ASSERT_EQ(job->getOutputsEntry(), boost::shared_ptr<OutputsEntry>());
+  ASSERT_EQ(job->getLineariseEntry(), boost::shared_ptr<LineariseEntry>());
 
 
   boost::shared_ptr<ModelerEntry> modeler = boost::shared_ptr<ModelerEntry>(new ModelerEntry::Impl());
@@ -47,12 +48,14 @@ TEST(APIJOBTest, testJobEntry) {
   job->setSolverEntry(solver);
   job->setSimulationEntry(simulation);
   job->setOutputsEntry(outputs);
+  job->setLineariseEntry(linearise);
 
   ASSERT_EQ(job->getName(), "job1");
   ASSERT_EQ(job->getModelerEntry(), modeler);
   ASSERT_EQ(job->getSolverEntry(), solver);
   ASSERT_EQ(job->getSimulationEntry(), simulation);
   ASSERT_EQ(job->getOutputsEntry(), outputs);
+  ASSERT_EQ(job->getLineariseEntry(), linearise);
 }
 
 }  // namespace job

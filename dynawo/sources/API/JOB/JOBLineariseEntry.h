@@ -22,7 +22,7 @@
 
 #include <string>
 
-#include "JOBExport.h"
+// #include "JOBExport.h"
 
 namespace job {
 
@@ -30,7 +30,7 @@ namespace job {
  * @class LineariseEntry
  * @brief Linearise entries container class
  */
-class __DYNAWO_JOB_EXPORT LineariseEntry {
+class LineariseEntry {
  public:
   /**
    * @brief Destructor

@@ -22,7 +22,7 @@
 
 #include <string>
 
-#include "JOBExport.h"
+// #include "JOBExport.h"
 
 namespace job {
 
@@ -30,7 +30,8 @@ namespace job {
  * @class ModalAnalysisEntry
  * @brief ModalAnalysis entries container class
  */
-class __DYNAWO_JOB_EXPORT ModalAnalysisEntry {
+// class __DYNAWO_JOB_EXPORT ModalAnalysisEntry {
+class ModalAnalysisEntry {
  public:
   /**
    * @brief Destructor

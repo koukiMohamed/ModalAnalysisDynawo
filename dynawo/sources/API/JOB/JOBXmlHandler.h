@@ -419,7 +419,7 @@ class ModalAnalysisHandler : public xml::sax::parser::ComposableElementHandler {
 
   /**
    * @brief return the ModalAnalysis entry read in xml file
-   * @return linearise entry object build thanks to infos read in xml file
+   * @return ModalAnaysis entry object build thanks to infos read in xml file
    */
   boost::shared_ptr<ModalAnalysisEntry> get() const;
 
@@ -431,7 +431,7 @@ class ModalAnalysisHandler : public xml::sax::parser::ComposableElementHandler {
   void create(attributes_type const& attributes);
 
  private:
-  boost::shared_ptr<ModalAnalysisEntry> modalanalysis_;  ///< current linearise entry object
+  boost::shared_ptr<ModalAnalysisEntry> modalanalysis_;  ///< current modalanalysis entry object
 };
 
 /**
@@ -453,7 +453,7 @@ class AllModesHandler : public xml::sax::parser::ComposableElementHandler {
 
   /**
    * @brief return the AllModes entry read in xml file
-   * @return linearise entry object build thanks to infos read in xml file
+   * @return allModes entry object build thanks to infos read in xml file
    */
   boost::shared_ptr<AllModesEntry> get() const;
 
@@ -465,7 +465,7 @@ class AllModesHandler : public xml::sax::parser::ComposableElementHandler {
   void create(attributes_type const& attributes);
 
  private:
-  boost::shared_ptr<AllModesEntry> allmodes_;  ///< current all modes entry object
+  boost::shared_ptr<AllModesEntry> allmodes_;  ///< current allmodes entry object
 };
 
 /**
@@ -487,7 +487,7 @@ class SubParticipationHandler : public xml::sax::parser::ComposableElementHandle
 
   /**
    * @brief return the SubParticipation entry read in xml file
-   * @return linearise entry object build thanks to infos read in xml file
+   * @return SubParticipation entry object build thanks to infos read in xml file
    */
   boost::shared_ptr<SubParticipationEntry> get() const;
 
@@ -499,7 +499,7 @@ class SubParticipationHandler : public xml::sax::parser::ComposableElementHandle
   void create(attributes_type const& attributes);
 
  private:
-  boost::shared_ptr<SubParticipationEntry> subparticipation_;  ///< current sub participation entry object
+  boost::shared_ptr<SubParticipationEntry> subparticipation_;  ///< current subparticipation entry object
 };
 
 
@@ -670,17 +670,17 @@ class OutputsHandler : public xml::sax::parser::ComposableElementHandler {
   void addLinearise();
 
   /**
-   * @brief add a linearise object to the current job
+   * @brief add a modalanalysis object to the current job
    */
   void addModalAnalysis();
 
   /**
-   * @brief add a linearise object to the current job
+   * @brief add a allmodes object to the current job
    */
   void addAllModes();
 
   /**
-   * @brief add a linearise object to the current job
+   * @brief add a subParticipation object to the current job
    */
   void addSubParticipation();
 

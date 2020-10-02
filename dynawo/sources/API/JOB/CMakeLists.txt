@@ -42,6 +42,10 @@ set(API_JOB_SOURCES
     JOBSolverEntryImpl.cpp
     JOBTimelineEntryImpl.cpp
     JOBModelsDirEntryImpl.cpp
+    JOBEvalLineariseEntryImpl.cpp
+    JOBEvalModalAnalysisEntryImpl.cpp
+    JOBAllModesEntryImpl.cpp
+    JOBSubParticipationEntryImpl.cpp
     )
 
 set(API_JOB_INCLUDE_HEADERS
@@ -69,6 +73,10 @@ set(API_JOB_INCLUDE_HEADERS
     JOBSolverEntry.h
     JOBTimelineEntry.h
     JOBModelsDirEntry.h
+    JOBLineariseEntry.h
+    JOBModalAnalysisEntry.h
+    JOBAllModesEntry.h
+    JOBSubParticipationEntry.h
     )
 
 add_library(dynawo_API_JOB ${LIBRARY_TYPE} ${API_JOB_SOURCES})
