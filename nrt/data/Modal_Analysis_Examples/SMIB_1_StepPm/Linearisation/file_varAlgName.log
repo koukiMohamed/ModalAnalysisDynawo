@@ -1,5 +1,7 @@
 Network_tfo_terminal2_V_im
 Network_tfo_terminal2_V_re
+Network_busInf_terminal_i_im
+Network_busInf_terminal_i_re
 Network_line1_terminal1_i_im
 Network_line1_terminal1_i_re
 Network_line1_terminal2_V_im
@@ -12,6 +14,8 @@ Network_line2_terminal2_i_im
 Network_line2_terminal2_i_re
 Network_tfo_terminal1_i_im
 Network_tfo_terminal1_i_re
+Network_tfo_terminal2_i_im
+Network_tfo_terminal2_i_re
 SM_gen_terminal_V_im
 SM_gen_terminal_V_re
 SM_avr_EfdPu
@@ -22,17 +26,12 @@ SM_avr_feedback_y
 SM_avr_gain_y
 SM_gen_MdSatPPu
 SM_gen_MqSatPPu
-SM_gen_PGenPu
-SM_gen_QGenPu
-SM_gen_QStatorPu_value
 SM_gen_cePu
 SM_gen_cmPu
 SM_gen_cos2Eta
 SM_gen_iDPu
 SM_gen_iQ1Pu
 SM_gen_iQ2Pu
-SM_gen_iStatorPu_im
-SM_gen_iStatorPu_re
 SM_gen_idPu
 SM_gen_ifPu
 SM_gen_iqPu
@@ -44,7 +43,6 @@ SM_gen_lambdaqPu
 SM_gen_mdsPu
 SM_gen_miPu
 SM_gen_mqsPu
-SM_gen_sStatorPu_im
 SM_gen_sin2Eta
 SM_gen_terminal_i_im
 SM_gen_terminal_i_re
@@ -59,5 +57,3 @@ SM_gover_PmRawPu_y
 SM_gover_feedback_y
 SM_gover_limiter_y
 SM_gover_switch_y
-Network_tfo_terminal2_i_im_connector_Network_tfo_terminal2_i_im
-Network_tfo_terminal2_i_re_connector_Network_tfo_terminal2_i_re

@@ -6,7 +6,7 @@ Number of Real Modes    :4
 -------------------------------------------COMPLEX STABLE MODES------------------------------------------
 ---------------------------------------------------------------------------------------------------------
 Nb.--imag. Part-- real Part--freq. Part--damp. Part--parti. Part-- arg. Part-- mode Type--mach. Name--
-2      6.6488     -0.4907      1.0582      7.3605    100.0000     42.2974         ROT          SM
+2      6.6488     -0.4907      1.0582      7.3605    100.0000     42.2976         ROT          SM
 
 ---------------------------------------------------------------------------------------------------------
 -----------------------------------------COMPLEX UNSTABLE MODES------------------------------------------
@@ -33,9 +33,9 @@ Minimum Relative Participation (%): 1
 ---------------------------------------------------------------------------------------------------------
 ind. State    |sub. Part|    mach. Name|     arg. Part|       state Type|
 =======================================================================================
-                Nb :2    ||    Mode : <(-0.4907,6.6488) >
+                Nb :2    ||    Mode : <(-0.4907,6.6488) > 
 =======================================================================================
-5          100.0000                  SM           42.2974            ROT
+5          100.0000                  SM           42.2976            ROT
 =======================================================================================
 Number of coupled modes is : 0
 Minimum Relative Participation (%):1.0000
@@ -47,6 +47,6 @@ Number of Electrical Coupling Modes :0
 indices of Electrical Coupling Modes :0
 
 Number of complex Local Modes :1
-indices of complex Local Modes:2,
+indices of complex Local Modes:2, 
 Number of Other Coupling Modes :0
 indices of Other Coupling Modes :0
