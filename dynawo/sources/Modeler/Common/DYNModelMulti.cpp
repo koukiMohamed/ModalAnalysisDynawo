@@ -1473,7 +1473,9 @@ ModelMulti::getMatrixB(const double t) {
   MatrixXd A11prime = contructSubMatrix(Aold1, indexVarDiff.size(), indexVarDiff.size(), indexEquDiff, indexVarDiff);
 
   //  ================get the index positions of the input variable: "UsRefPu"==================================//
-  vector<int> indexVref = getIndexPositionString(varAlgName, "UsRefPu");  // "UsRefPu");
+  vector<int> indexVref = getIndexPositionString(varAlgName, "URef");  // "UsRefPu");
+  vector<int> indexVref0 = getIndexPositionString(varAlgName, "UsRefPu");  // "UsRefPu");
+  indexVref.insert(indexVref.end(), indexVref0.begin(), indexVref0.end());
   R = Eigen::MatrixXd::Zero(varAlgName.size(), indexVref.size());
   for (unsigned int k = 0; k < indexVref.size(); k++) {
   for (unsigned int j = 0; j < varAlgName.size(); j++) {
