@@ -3359,23 +3359,17 @@ ModelMulti::contructMMatrix(const double t, vector<int> coupledClass) {
     MatrixXcd H = MatrixXcd::Zero(A11.rows(), A11.rows());;
     MatrixXcd M;
     MatrixXd E = MatrixXd::Identity(A22.rows(), A22.rows());
-    cout << "end0:" << endl;
     for (unsigned int i = 0; i < A11.rows(); i++) {
     X1 = (eigenValComplex(i)*E - A22);
     X2 = A12*X1.inverse()*A21;
-    // cout << "end4:" << endl;
     X3 = X2*eigenVectorComplex.col(i);
-    // cout << "end3:" << endl;
-    // cout << "X3.size():" << X3.size() << endl;
     for (unsigned int j = 0; j < X3.size(); j++) {
     H(i, j) = X3(j);
     }
-    // (A12*((eigenValComplex(i)1E-A22).inverse())*A21)*eigenVectorComplex.col(i);
     }
     writeToFileComplex(H, "Linearisation/H.txt");
     M = H*eigenVectorComplex.inverse();
     writeToFileComplex(M, "Linearisation/M.txt");
-    // cout << "end:" << endl;
     return H;
 }
 
