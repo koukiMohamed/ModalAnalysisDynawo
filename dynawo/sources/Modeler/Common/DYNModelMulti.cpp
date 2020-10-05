@@ -3427,9 +3427,6 @@ ModelMulti::largeScaleModalAnalysis(const double t) {
     cout << "eigenValComplex.size():" << eigenValComplex.size() <<"--condA:" << condA << "--ArrayXcd:" << eigenValComplex(m) << endl;
     }
     }
-    /* for (unsigned int k = 0; k < eigenValComplex.size(); k++) {
-    cout << "ArrayXcd:" << eigenValComplex(k) << endl;
-    }*/
     alleigen1 = convertEigenArrayCToStdVector(eigenValComplex);
     alleigen.insert(alleigen.end(), alleigen1.begin(), alleigen1.end());
     coupledClass.clear();
